@@ -1,0 +1,166 @@
+INSERT INTO Acount (UserName, DisplayName, Type, PassWord)
+VALUES
+    ('PhuongTienHung1', 'Phương Tiến Hùng', 0, '1111'),
+    ('User2', 'Người dùng 2', 0, '1111'),
+    ('User3', 'Người dùng 3', 0, '1111'),
+    ('User4', 'Người dùng 4', 0, '1111'),
+    ('User5', 'Người dùng 5', 0, '1111');
+
+INSERT INTO TableFood (ID, NAME, STATUS) VALUES
+(1, N'Bàn 1', N'ĐANG TRỐNG'), 
+(2, N'Bàn 2', N'ĐANG SỬ DỤNG'), 
+(3, N'Bàn 3', N'ĐÃ ĐẶT TRƯỚC'), 
+(4, N'Bàn 4', N'ĐANG TRỐNG'), 
+(5, N'Bàn 5', N'ĐANG SỬ DỤNG'), 
+(6, N'Bàn 6', N'ĐANG TRỐNG'), 
+(7, N'Bàn 7', N'ĐÃ ĐẶT TRƯỚC'), 
+(8, N'Bàn 8', N'ĐANG SỬ DỤNG'), 
+(9, N'Bàn 9', N'ĐANG TRỐNG'), 
+(10, N'Bàn 10', N'ĐANG SỬ DỤNG'), 
+(11, N'Bàn 11', N'ĐÃ ĐẶT TRƯỚC'), 
+(12, N'Bàn 12', N'ĐANG TRỐNG'), 
+(13, N'Bàn 13', N'ĐANG SỬ DỤNG'), 
+(14, N'Bàn 14', N'ĐÃ ĐẶT TRƯỚC'), 
+(15, N'Bàn 15', N'ĐANG TRỐNG'), 
+(16, N'Bàn 16', N'ĐANG SỬ DỤNG'), 
+(17, N'Bàn 17', N'ĐANG TRỐNG'), 
+(18, N'Bàn 18', N'ĐÃ ĐẶT TRƯỚC'), 
+(19, N'Bàn 19', N'ĐANG SỬ DỤNG'), 
+(20, N'Bàn 20', N'ĐANG TRỐNG');
+
+INSERT INTO FoodCategory (ID, Name) VALUES
+(1, N'Món chính'),
+(2, N'Món phụ'),
+(3, N'Thức uống'),
+(4, N'Thức ăn nhanh'),
+(5, N'Tráng miệng');
+
+INSERT INTO Food (ID, Name, IdCategory, Price) VALUES
+-- Món chính
+(1, N'Cơm tấm', 1, 30000),
+(2, N'Phở', 1, 50000),
+(3, N'Bún thịt nướng', 1, 40000),
+(4, N'Gà rán', 1, 60000),
+(5, N'Bò kho', 1, 70000),
+
+-- Món phụ
+(6, N'Canh chua', 2, 20000),
+(7, N'Chả giò', 2, 25000),
+(8, N'Salad', 2, 15000),
+(9, N'Khoai tây chiên', 2, 18000),
+(10, N'Món xào', 2, 22000),
+
+-- Thức uống
+(11, N'Nước ngọt', 3, 10000),
+(12, N'Trà đá', 3, 5000),
+(13, N'Sinh tố', 3, 15000),
+(14, N'Cafe', 3, 20000),
+(15, N'Nước ép', 3, 18000),
+
+-- Thức ăn nhanh
+(16, N'Hamburger', 4, 35000),
+(17, N'Pizza', 4, 70000),
+(18, N'Hotdog', 4, 30000),
+(19, N'Sushi', 4, 50000),
+(20, N'Cháo', 4, 25000),
+
+-- Tráng miệng
+(21, N'Tàu hũ', 5, 15000),
+(22, N'Kem', 5, 20000),
+(23, N'Chè', 5, 25000),
+(24, N'Bánh flan', 5, 30000),
+(25, N'Bánh mì ngọt', 5, 18000);
+
+INSERT INTO Bill (ID, DateCheckIn, DateCheckOut, IdTable, Status) VALUES
+(1, '2023-09-20', '2023-09-20', 1, 1), -- Đang trống, đã thanh toán
+(2, '2023-09-21', NULL, 2, 0), -- Đang sử dụng, chưa thanh toán
+(3, '2023-09-22', '2023-09-22', 3, 1), -- Đã đặt trước, đã thanh toán
+(4, '2023-09-23', NULL, 4, 0), -- Đang trống, chưa thanh toán
+(5, '2023-09-24', '2023-09-24', 5, 1), -- Đang sử dụng, đã thanh toán
+(6, '2023-09-25', NULL, 6, 0), -- Đang trống, chưa thanh toán
+(7, '2023-09-26', '2023-09-26', 7, 1), -- Đã đặt trước, đã thanh toán
+(8, '2023-09-27', NULL, 8, 0), -- Đang sử dụng, chưa thanh toán
+(9, '2023-09-28', '2023-09-28', 9, 1), -- Đang trống, đã thanh toán
+(10, '2023-09-29', NULL, 10, 0); -- Đang sử dụng, chưa thanh toán
+
+INSERT INTO BillInfo (ID, IdBill, IdFood, Count) VALUES
+-- Bill 1 (5 món)
+(1, 1, 1, 2), -- Cơm tấm
+(2, 1, 6, 1), -- Canh chua
+(3, 1, 11, 2), -- Nước ngọt
+(4, 1, 21, 1), -- Tàu hũ
+(5, 1, 5, 1), -- Bò kho
+
+-- Bill 2 (4 món)
+(6, 2, 2, 3), -- Phở
+(7, 2, 7, 2), -- Chả giò
+(8, 2, 12, 1), -- Trà đá
+(9, 2, 23, 1), -- Chè
+
+-- Bill 3 (6 món)
+(10, 3, 3, 1), -- Bún thịt nướng
+(11, 3, 8, 2), -- Salad
+(12, 3, 12, 1), -- Trà đá
+(13, 3, 22, 2), -- Kem
+(14, 3, 14, 1), -- Cafe
+(15, 3, 4, 1), -- Gà rán
+
+-- Bill 4 (5 món)
+(16, 4, 4, 1), -- Gà rán
+(17, 4, 9, 3), -- Khoai tây chiên
+(18, 4, 10, 2), -- Món xào
+(19, 4, 13, 1), -- Sinh tố
+(20, 4, 24, 2), -- Bánh flan
+
+-- Bill 5 (6 món)
+(21, 5, 5, 1), -- Bò kho
+(22, 5, 9, 1), -- Khoai tây chiên
+(23, 5, 17, 2), -- Pizza
+(24, 5, 11, 2), -- Nước ngọt
+(25, 5, 25, 1), -- Bánh mì ngọt
+(26, 5, 23, 1), -- Chè
+
+-- Bill 6 (4 món)
+(27, 6, 21, 1), -- Tàu hũ
+(28, 6, 24, 2), -- Bánh flan
+(29, 6, 14, 1), -- Cafe
+(30, 6, 15, 1), -- Nước ép
+
+-- Bill 7 (8 món)
+(31, 7, 14, 2), -- Cafe
+(32, 7, 19, 1), -- Sushi
+(33, 7, 20, 3), -- Cháo
+(34, 7, 7, 2), -- Chả giò
+(35, 7, 5, 1), -- Bò kho
+(36, 7, 1, 1), -- Cơm tấm
+(37, 7, 13, 1), -- Sinh tố
+(38, 7, 16, 1), -- Hamburger
+
+-- Bill 8 (5 món)
+(39, 8, 15, 3), -- Nước ép
+(40, 8, 10, 1), -- Món xào
+(41, 8, 24, 2), -- Bánh flan
+(42, 8, 12, 2), -- Trà đá
+(43, 8, 3, 1), -- Bún thịt nướng
+
+-- Bill 9 (4 món)
+(44, 9, 22, 2), -- Kem
+(45, 9, 25, 1), -- Bánh mì ngọt
+(46, 9, 17, 1), -- Pizza
+(47, 9, 19, 1), -- Sushi
+
+-- Bill 10 (7 món)
+(48, 10, 25, 1), -- Bánh mì ngọt
+(49, 10, 21, 2), -- Tàu hũ
+(50, 10, 18, 1), -- Hotdog
+(51, 10, 8, 3), -- Salad
+(52, 10, 4, 1), -- Gà rán
+(53, 10, 9, 2), -- Khoai tây chiên
+(54, 10, 5, 1); -- Bò kho
+
+select * from Acount 
+select * from TableFood 
+select * from bill 
+select * from BillInfo 
+select * from Food 
+select * from FoodCategory 

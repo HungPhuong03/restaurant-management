@@ -1,0 +1,13 @@
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.pdb
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.AssemblyReference.cache
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fLogin.resources
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.cache
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fTableManager.resources
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fAcountProfile.resources
+C:\Users\tien hung\OneDrive\Máy tính\FolderQuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fAdmin.resources

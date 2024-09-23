@@ -1,0 +1,71 @@
+create database QuanLyNhaHang
+go
+
+use QuanLyNhaHang
+go
+
+--Food
+--Table
+--FoodCatagogy
+--Acount
+--Bill
+--Bilnfo
+
+CREATE TABLE TableFood
+(
+	ID INT PRIMARY KEY,
+	NAME NVARCHAR(100) NOT NULL,
+	STATUS NVARCHAR(100) NOT NULL DEFAULT N'ĐANG TRỐNG' --ĐANG TRỐNG , ĐANG SỬ DỤNG, ĐÃ ĐẶT TRƯỚC
+)
+GO
+
+CREATE TABLE Acount
+(
+	UserName NVARCHAR(100) PRIMARY KEY,
+	DisplayName NVARCHAR(100) NOT NULL,
+	Type int NOT NULL DEFAULT 0 --1.ADMIN, 0.STAFF
+)
+GO
+
+CREATE TABLE FoodCategory
+(
+	ID INT PRIMARY KEY,
+	Name NVARCHAR(100) NOT NULL,
+)
+GO
+
+CREATE TABLE Food
+(
+	ID INT PRIMARY KEY,
+	Name NVARCHAR(100),
+	IdCategory INT NOT NULL,
+	Price FLOAT DEFAULT 0
+
+	FOREIGN KEY (IdCategory) REFERENCES FoodCategory(ID)
+)
+GO
+
+CREATE TABLE Bill
+(
+	ID INT PRIMARY KEY,
+	DateCheckIn DATE DEFAULT GETDATE(),
+	DateCheckOut DATE,
+	IdTable INT NOT NULL,
+	Status INT DEFAULT 0 --1.ĐÃ THANH TOÁN, 0.CHƯA THANH TOÁN
+
+	FOREIGN KEY (IdTable) REFERENCES TableFood(ID)
+)
+GO
+
+CREATE TABLE BillInfo
+(
+	ID INT PRIMARY KEY,
+	IdBill INT NOT NULL,
+	IdFood INT NOT NULL,
+	Count INT DEFAULT 0
+
+	FOREIGN KEY (IdBill) REFERENCES Bill(ID),
+	FOREIGN KEY (IdFood) REFERENCES Food(ID)
+)
+GO
+

@@ -1,0 +1,12 @@
+CREATE PROC USP_Login
+@userNam nvarchar(100), @passWord nvarchar(100)
+AS
+BEGIN
+	SELECT * FORM Acount WHERE UserName = @userNam AND PassWord = @passWord
+END
+GO
+
+CREATE PROC USP_GetTableList
+AS
+SELECT * FROM TableFood
+GO

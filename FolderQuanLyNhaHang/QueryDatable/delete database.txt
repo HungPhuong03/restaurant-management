@@ -1,0 +1,17 @@
+-- Xóa dữ liệu bảng BillInfo trước
+DELETE FROM BillInfo;
+
+-- Xóa dữ liệu bảng Bill
+DELETE FROM Bill;
+
+-- Xóa dữ liệu bảng Food
+DELETE FROM Food;
+
+-- Xóa dữ liệu bảng FoodCategory
+DELETE FROM FoodCategory;
+
+-- Xóa dữ liệu bảng TableFood
+DELETE FROM TableFood;
+
+-- Xóa dữ liệu bảng Acount
+DELETE FROM Acount;
